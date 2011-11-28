@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>A Mole Valley Farmers branch has placed an order for uniforms</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Monsoon Marketing - David Dean" />
+    <meta name="description" content="Mole Valley Farmers ordering system" />
+  </head>
+  
+  <body>
+    
+    <h1>A Mole Valley Farmers branch has placed an order for uniforms</h1>
+    
+    <p><strong>Please take a look and check if this order is OK to be fulfilled by Monsoon Marketing.</strong></p>
+    <p style="color:f00;">If it is approved, please forward this email to <%= mail_to "sales@monmark.co.uk", "sales@monmark.co.uk" %>.</p>
+    
+    <h2>Branch details</h2>
+    <p>Branch No: <%= @order.branch %></p>
+    <p>Address: <%= @order.address %></p>
+    <p>Branch contact: <%= @order.contact %></p>
+    <p>Employee name (to be embroidered): <%= @order.employee %></p>
+    <p>Employee job title: <%= @order.job_title %></p>
+    <p>Order No: <%= @order.order_number %></p>
+
+    <h2>Order details</h2>
+    <ul>
+      <% for li in @order.line_items %>
+        <% unless li.quantity == 0 %>
+          <li>
+            <%= li.quantity %> x
+            <%= li.product.name %> <%= "(#{li.size})" if li.size %> @
+            &pound;<%= sprintf("%.02f", li.product.price / 100.0) %> each =
+            &pound;<%= sprintf("%.02f", li.total / 100.0) %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <p><strong>Order Total: &pound;<%= sprintf("%.02f", @order.total / 100.0) %></strong></p>
+    
+  </body>
+  
+</html>

@@ -1,0 +1,30 @@
+------------------------------------------------------
+A Mole Valley Farmers branch has placed an order for uniforms
+------------------------------------------------------
+
+Please take a look and check if this order is OK to be fulfilled by Monsoon Marketing.
+
+If it is approved, please forward this email to sales@monmark.co.uk.
+
+--------------
+Branch details
+--------------
+
+Branch No: <%= @order.branch %>
+Address: <%= @order.address %>
+Branch contact: <%= @order.contact %>
+Employee name (to be embroidered): <%= @order.employee %>
+Employee job title: <%= @order.job_title %>
+Order No: <%= @order.order_number %>
+
+-------------
+Order details
+-------------
+
+<% for li in @order.line_items %>
+  <% unless li.quantity == 0 %>
+    <%= li.quantity %> x <%= li.product.name %> <%= "(#{li.size})" if li.size %> @ £<%= sprintf("%.02f", li.product.price / 100.0) %> each = £<%= sprintf("%.02f", li.total / 100.0) %>
+  <% end %>
+<% end %>
+
+Order Total: £<%= sprintf("%.02f", @order.total / 100.0) %>

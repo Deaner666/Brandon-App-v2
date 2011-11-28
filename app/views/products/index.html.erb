@@ -1,0 +1,9 @@
+<h1><%= @title %></h1>
+
+<% for product in @products do %>
+
+  <%= form_tag line_items_path, :method => :post do %>
+    <%= render :partial => 'form', :locals => { :product => product } %>
+  <% end %>
+
+<% end %>

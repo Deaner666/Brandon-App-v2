@@ -1,0 +1,184 @@
+/*
+Fluid Framework | site.css
+This stylesheet is for your site specific CSS.
+Media:          screen, handheld.
+Screen width:   Any.
+Target devices: Any.
+Notes: 
+*/
+
+/*
+Colours:
+Background Pale Grey:     	#ebebeb
+Nav Bar / Sidebar Mid Grey:	#d8d8d8
+Medium Dark Grey:						#cacaca
+Background Dark Charcoal: 	#222
+Bright Red:               	#de4337
+Link Green:               	#008A29
+Highlight Yellow:         	#ffd92a
+Brandon Blue:								#14397d
+Brandon Orange:							#
+
+Margins:
+Bottom margin to space elements vertically should be 24px to maintain the baseline grid.
+*/
+
+/*
+Layout Styles
+*/
+
+body { background: #ebebeb; }
+
+/* The top login-bar */
+#login-bar {
+	background: #222; border-bottom: 2px solid #000; color: #fff;
+	padding-top: 10px; padding-bottom: 10px;
+}
+#login-bar p { margin-bottom: 0; } /* Overrides typography.css */
+#login-bar a { color: #de4337; }
+#login-bar a:hover { color: #fff; }
+
+/* The masthead title bar */
+#masthead { padding: 30px 0 30px 0; }
+#masthead h1 {
+	text-align: center;
+	margin-bottom: 0; /* Overrides typography.css */
+}
+
+/* The main site navigation bar */
+#main-nav {
+	background: #d8d8d8; border-top: 2px solid #cacaca; border-bottom: 2px solid #cacaca;
+	padding: 10px 0 10px 0;
+}
+#main-nav ul {
+	text-align: center;
+	margin: 0; /* Overrides typography.css */
+}
+#main-nav ul li { display: inline; }
+
+#page {
+	background: url(/images/layout/nav_grad.png) top repeat-x;
+	padding-top: 30px; /*padding-bottom: 24px;*/
+}
+
+/* The sidebar */
+#sidebar {
+	background: #d8d8d8; padding-top: 12px; margin-bottom: 24px;
+	border-radius: 20px; -moz-border-radius: 20px;
+	-webkit-border-radius: 20px; -khtml-border-radius: 20px;
+}
+#sidebar p, #sidebar h1, #sidebar ul, #sidebar form { margin-left: 15px; margin-right: 15px; }
+#sidebar .button-group, #sidebar .extra-buttons { margin-left: 10px; margin-right: 10px; }
+#sidebar h1 { font-size: 20px; }
+#order-summary {
+	background: #cacaca; margin: 0 15px 24px 15px; padding: 15px;
+	border-radius: 15px; -moz-border-radius: 15px;
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px;
+}
+#order-summary li { list-style: none; }
+#order-summary li.even { background: #aaa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }
+#order-summary li.odd { background: #bababa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }
+
+/* The page footer */
+#page-footer {
+	background: #222; border-top: 2px solid #000; color: #fff;
+	padding-top: 12px;
+}
+#page-footer p { font-size: 0.85em; }
+#page-footer ul { font-size: 0.85em; }
+#page-footer a { color: #de4337; }
+
+#notice {
+  background: #d9f7cd; border: 1px solid #54a36b;
+  margin-bottom: 12px; padding: 6px;
+  border-radius: 5px; -moz-border-radius: 5px;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px;
+}
+
+#alert {
+  background: #ff9b9b; border: 1px solid #aa3b3b;
+  margin-bottom: 12px; padding: 6px;
+  border-radius: 5px; -moz-border-radius: 5px;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px;
+}
+
+/*
+Page Specific Styles
+*/
+
+/* For styling the Formtastic new order form */
+form.formtastic button, form.formtastic p, form.formtastic ul { margin-bottom: 24px; }
+/*form.formtastic input.branch { width: 150px; }
+form.formtastic input.contact { width: 150px; }
+form.formtastic input.quantity { width: 30px; }
+form.formtastic fieldset > ol > li label { display:block; width:55%; float:left; padding-top:.2em; }
+form.formtastic p.qty-label { margin-left: 55%; margin-bottom: 6px; }
+form.formtastic fieldset.buttons { padding-left:55%; }
+form.formtastic fieldset > ol > li p.inline-errors { margin:0.5em 0 0 55%; }
+form.formtastic fieldset > ol > li ul.errors { margin:0.5em 0 0 55%; }
+form.formtastic .price { float: right; }
+form.formtastic fieldset > ol > li p.inline-hints { margin:0.5em 0 0 55%; }
+
+form.button_to { margin-bottom: 24px; }*/
+
+/* For styling the list of products */
+.product-entry table { width: 100%; margin-bottom: 24px; padding-bottom: 12px; border-bottom: #cacaca 1px solid; }
+.product-entry th { font-size: 1.2em; text-align: left; font-family: Georgia, "Times New Roman", serif; }
+.product-entry input { width: 30px; }
+.product-entry td.image { background: #d8d8d8; width: 75px; height: 75px; }
+.product-entry td.quantity, .product-entry td.add-button { padding-left: 10px; }
+.product-entry td.quantity { width: 100px; }
+
+/* For styling the order-edit form */
+#order-edit {  }
+#order-edit .details { 
+	background: #cacaca; margin: 0 0 24px 0; padding: 15px;
+	border-radius: 15px; -moz-border-radius: 15px;
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px;
+}
+#order-edit table { width: 100%; }
+#order-edit table tr.even { background: #aaa; }
+#order-edit table tr.odd { background: #bababa; }
+#order-edit table td { padding: 5px; }
+#order-edit table td.product-name { width: 50%; }
+#order-edit table td.product-quantity { width: 30%; text-align: right; }
+#order-edit table td.product-quantity input { width: 30px; }
+#order-edit table td.product-quantity button { display: inline; }
+#order-edit table td.product-price { width: 20%; text-align: right; }
+#order-edit .order-total { margin-bottom: 0; text-align: right; }
+
+/* For styling the order summary section of the final submit order form */
+#order-details {
+	background: #cacaca; margin: 0 0 24px 0; padding: 15px;
+	border-radius: 15px; -moz-border-radius: 15px;
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px;
+}
+#order-details li { list-style: none; margin-bottom: 6px; }
+#order-details li.even { background: #aaa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }
+#order-details li.odd { background: #bababa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }
+#order-details strong { font-weight: bold; }
+.extra-controls { margin-bottom: 24px; }
+
+/*
+Miscellaneous Styles
+*/
+
+.highlight {
+  background: #ffefa5; padding: 5px; border: 1px solid #ffd92a;
+  border-radius: 5px; -moz-border-radius: 5px;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px;
+}
+
+.fancy-button {
+	width: 200px; height: 48px; background: #008A29; color: #fff;
+	border-radius: 48px; -moz-border-radius: 48px;
+	-webkit-border-radius: 48px; -khtml-border-radius: 48px;
+}
+.fancy-button h1 {
+	font-size: 1em; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	margin-left: 12px; margin-top: 6px; float: left;
+}
+.fancy-button img { float: right; margin-top: 6px; margin-right: 6px; }
+
+.blue { color: #14397d; }
+.orange { color: #ea9439; }
