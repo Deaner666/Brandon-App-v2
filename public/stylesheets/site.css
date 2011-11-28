@@ -40,7 +40,7 @@ body { background: #ebebeb; }
 
 /* The masthead title bar */
 #masthead { padding: 30px 0 30px 0; }
-#masthead h1 {
+#masthead h1, h2 {
 	text-align: center;
 	margin-bottom: 0; /* Overrides typography.css */
 }
