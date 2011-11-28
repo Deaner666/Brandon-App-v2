@@ -3,10 +3,6 @@
     <tr>
       <th colspan="3">
         <%= label_tag :product_id, product.name %>
-        <% if product.sizes.count > 0 %>
-          &nbsp; - &nbsp;
-          <%= select_tag :size, options_for_select(product.sizes.collect{ |p| p.name }) %>
-        <% end %>
         - <%= format_price product.price if product.price %>
       </th>
     </tr>

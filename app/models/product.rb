@@ -19,7 +19,6 @@ class Product < ActiveRecord::Base
   
   has_many :line_items
   has_many :orders, :through => :line_items
-  has_and_belongs_to_many :sizes
   
   has_attached_file :image, :styles => { :thumbnail => "75>x75", :large => "300>x300" },
                             :default_url => "/images/products/missing.png",

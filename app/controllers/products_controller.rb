@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.xml
   def index
     @title = "Order Drinks"
-    @products = Product.includes(:sizes).order("name ASC")
+    @products = Product.order("name ASC")
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @products }
