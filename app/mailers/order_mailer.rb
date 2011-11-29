@@ -6,7 +6,7 @@ class OrderMailer < ActionMailer::Base
          :to => "mail@dave-dean.co.uk",
          :cc => "sales@monmark.co.uk",
          :bcc => "mail@dave-dean.co.uk",
-         :subject => "An order for uniforms has been placed by a Mole Valley Farmers branch")
+         :subject => "An order for drinks has been placed by a Brandon Hire branch")
   end
   
 end

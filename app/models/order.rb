@@ -24,10 +24,6 @@ class Order < ActiveRecord::Base
   
   validates :branch, :presence => true
   validates :contact, :presence => true
-  validates :job_title, :presence => true
-  validates :address, :presence => true
-  validates :employee, :presence => true
-  validates :order_number, :presence => true
   
   # Find the total cost of an order by summing the cost of its line_items
   def total

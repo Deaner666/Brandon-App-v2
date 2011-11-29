@@ -153,6 +153,7 @@ form.button_to { margin-bottom: 24px; }*/
 	border-radius: 15px; -moz-border-radius: 15px;
 	-webkit-border-radius: 15px; -khtml-border-radius: 15px;
 }
+#order-details h2, #branch-details h2 { text-align: left; margin-bottom: 24px; }
 #order-details li { list-style: none; margin-bottom: 6px; }
 #order-details li.even { background: #aaa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }
 #order-details li.odd { background: #bababa; margin-left: -5px; margin-right: -5px; padding: 0 5px 0 5px; }

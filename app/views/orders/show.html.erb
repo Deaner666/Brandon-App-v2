@@ -7,26 +7,12 @@
     <%= f.inputs do %>
       <%= f.input :branch, :label => "Branch No.",
                            :required => true,
+                           :hint => "This is your branch cost centre number (usually 3 digits)",
                            :input_html => { :class => "branch", :value => "" } %>
-      <%= f.input :address, :label => "Address",
-                            :required => true,
-                            :input_html => { :class => "address", :value => "" } %>
       <%= f.input :contact, :label => "Contact name",
                             :required => true,
                             :hint => "Usually the branch manager, in case we need to contact you",
                             :input_html => { :class => "contact", :value => "" } %>
-      <%= f.input :employee, :label => "Employee name",
-                            :required => true,
-                            :hint => "Employee's full name. This is the name that will be embroidered on the uniform",
-                            :input_html => { :class => "employee", :value => "" } %>
-      <%= f.input :job_title, :label => "Employee job title",
-                              :required => true,
-                              :hint => "The employee's job title",
-                              :input_html => { :class => "job-title", :value => "" } %>
-      <%= f.input :order_number, :label => "Order Number",
-                                 :required => true,
-                                 :hint => "Your purchase order number",
-                                 :input_html => { :class => "order_no", :value => "" } %>
     <% end %>
   </section>
   
