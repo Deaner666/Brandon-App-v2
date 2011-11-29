@@ -23,7 +23,7 @@ class Product < ActiveRecord::Base
   has_attached_file :image, :styles => { :thumbnail => "75>x75", :large => "300>x300" },
                             :default_url => "/images/products/missing.png",
                             :storage => :s3,
-                            :bucket => 'brandonhire',
+                            :bucket => 'brandonhiredrinks',
                             :s3_credentials => "#{Rails.root}/config/s3.yml"
   
   validates :name,       :presence => true
