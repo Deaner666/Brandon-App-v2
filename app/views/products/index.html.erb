@@ -1,5 +1,7 @@
 <h1><%= @title %></h1>
 
+<div class="highlight">All drinks come in trays of 20. Drinks are 11p each.</div>
+
 <% for product in @products do %>
 
   <%= form_tag line_items_path, :method => :post do %>
