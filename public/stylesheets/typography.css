@@ -13,7 +13,7 @@ body {
 	line-height: 24px;		/* Changing this will break the baseline grid. */
 }
 
-a {	color: #008A29;	font-weight: bold; }
+a {	color: #db6c00;	font-weight: bold; }
 a:hover { color: #000; }
 a img { display: block; }		/* Stops image links getting text link styles */
 

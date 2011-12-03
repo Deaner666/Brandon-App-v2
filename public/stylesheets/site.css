@@ -27,7 +27,7 @@ Bottom margin to space elements vertically should be 24px to maintain the baseli
 Layout Styles
 */
 
-body { background: #ebebeb; }
+body { background: #dfe4ed; }
 
 /* The top login-bar */
 #login-bar {
@@ -39,15 +39,15 @@ body { background: #ebebeb; }
 #login-bar a:hover { color: #fff; }
 
 /* The masthead title bar */
-#masthead { padding: 30px 0 30px 0; }
-#masthead h1, h2 {
-	text-align: center;
+#masthead { padding: 30px 0 30px 0; background: #14397d; }
+#masthead h1, #masthead h2 {
+	text-align: center; color: #fff;
 	margin-bottom: 0; /* Overrides typography.css */
 }
 
 /* The main site navigation bar */
 #main-nav {
-	background: #d8d8d8; border-top: 2px solid #cacaca; border-bottom: 2px solid #cacaca;
+	background: #ccd8ed; border-top: 2px solid #888; border-bottom: 2px solid #cacaca;
 	padding: 10px 0 10px 0;
 }
 #main-nav ul {
