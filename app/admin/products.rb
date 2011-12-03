@@ -5,6 +5,7 @@ ActiveAdmin.register Product do
       f.input :name
       f.input :stock_code
       f.input :price, :hint => "In pence. ie. 795 = &pound;7.95"
+      f.input :position
       f.input :image
     end
     f.buttons
@@ -15,6 +16,7 @@ ActiveAdmin.register Product do
     column :name
     column :stock_code
     column :price
+    column :position
     column :created_at
     column :updated_at
     column :image_content_type
@@ -24,7 +26,7 @@ ActiveAdmin.register Product do
   show do
     
     attributes_table do
-      rows :name, :stock_code, :price
+      rows :name, :stock_code, :price, :position
       row :image do
         image_tag product.image.url(:thumbnail)
       end
