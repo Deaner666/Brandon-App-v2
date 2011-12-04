@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController  
   
-  before_filter :find_order
+  before_filter :find_order, :authenticate_user!
   
   # GET /orders/1
   # GET /orders/1.xml

@@ -1,6 +1,7 @@
 class LineItemsController < ApplicationController
   
   before_filter :find_order, :only => :create
+  before_filter :authenticate_user!
   
   # POST /line_items  
   # POST /line_items.xml
