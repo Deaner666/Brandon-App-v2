@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable,
          :rememberable, :trackable, :validatable, :authentication_keys => [:username]
   
+  validates_presence_of :username
   validates_uniqueness_of :username
+  validates_numericality_of :depot_number, :only_integer => true
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me
