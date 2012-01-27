@@ -17,6 +17,7 @@ gem "aws-s3", "~> 0.6.2"
 gem "rmagick", "~> 2.13.1"
 gem "paperclip", "~> 2.3"
 gem "sass", "3.1.12"
+gem "aasm", "3.0.2"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
