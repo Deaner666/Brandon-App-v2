@@ -18,12 +18,13 @@ class Order < ActiveRecord::Base
   
   has_many :line_items
   has_many :products, :through => :line_items
+  belongs_to :user
+  
+  validates_presence_of :user_id
+  validates_numericality_of :user_id, :only_integer => true
   
   accepts_nested_attributes_for :line_items,
     :reject_if => lambda { |a| a[:quantity].blank? }
-  
-  validates :branch, :presence => true
-  validates :contact, :presence => true
   
   # Find the total cost of an order by summing the cost of its line_items
   def total

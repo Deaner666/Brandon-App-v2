@@ -4,16 +4,29 @@
   
   <section id="branch-details">
     <h2>Branch details</h2>
-    <%= f.inputs do %>
-      <%= f.input :branch, :label => "Branch No.",
-                           :required => true,
-                           :hint => "This is your branch cost centre number (usually 3 digits)",
-                           :input_html => { :class => "branch", :value => "" } %>
-      <%= f.input :contact, :label => "Contact name",
-                            :required => true,
-                            :hint => "Usually the branch manager, in case we need to contact you",
-                            :input_html => { :class => "contact", :value => "" } %>
-    <% end %>
+    <table>
+      <tr class="odd">
+        <td class="label">Branch Number:</td> <td><%= @order.user.depot_number %></td>
+      </tr>
+      <tr class="even">
+        <td class="label">Branch Name:</td> <td><%= @order.user.depot_name %></td>
+      </tr>
+      <tr class="odd">
+        <td class="label">Branch Address 1:</td> <td><%= @order.user.address1 %></td>
+      </tr>
+      <tr class="even">
+        <td class="label">Branch Address 2:</td> <td><%= @order.user.address2 %></td>
+      </tr>
+      <tr class="odd">
+        <td class="label">Branch Address 3:</td> <td><%= @order.user.address3 %></td>
+      </tr>
+      <tr class="even">
+        <td class="label">Branch Address 4:</td> <td><%= @order.user.address4 %></td>
+      </tr>
+      <tr class="odd">
+        <td class="label">Branch Postcode:</td> <td><%= @order.user.postcode %></td>
+      </tr>
+    </table>
   </section>
   
   <section id="order-details">

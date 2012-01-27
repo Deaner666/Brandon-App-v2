@@ -147,6 +147,20 @@ form.button_to { margin-bottom: 24px; }*/
 #order-edit table td.product-price { width: 20%; text-align: right; }
 #order-edit .order-total { margin-bottom: 0; text-align: right; }
 
+/* For styling the branch details section of the final submit order form */
+#branch-details {
+	background: #cacaca; padding: 15px; margin-bottom: 24px;
+	border-radius: 15px; -moz-border-radius: 15px;
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px;
+}
+#branch-details table {
+	width: 100%;
+}
+#branch-details tr.even { background: #aaa; margin-left: -5px; padding: 0 5px 0 5px; }
+#branch-details tr.odd { background: #bababa; margin-left: -5px; padding: 0 5px 0 5px; }
+#branch-details td { padding: 5px; }
+#branch-details td.label { width: 30%; }
+
 /* For styling the order summary section of the final submit order form */
 #order-details {
 	background: #cacaca; margin: 0 0 24px 0; padding: 15px;
