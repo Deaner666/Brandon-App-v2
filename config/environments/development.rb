@@ -16,6 +16,7 @@ BrandonApp::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
   # Setup for use with mailcatcher. Delivered mail can be seen at http://localhost:1080
   ActionMailer::Base.delivery_method = :smtp
