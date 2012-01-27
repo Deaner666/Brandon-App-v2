@@ -16,15 +16,36 @@
 
 class Order < ActiveRecord::Base
   
+  include AASM
+  
   has_many :line_items
   has_many :products, :through => :line_items
   belongs_to :user
   
-  validates_presence_of :user_id
+  validates_presence_of :user_id, :status
   validates_numericality_of :user_id, :only_integer => true
   
   accepts_nested_attributes_for :line_items,
     :reject_if => lambda { |a| a[:quantity].blank? }
+    
+  aasm :column => :status do
+    state :incomplete, :initial => true
+    state :pending
+    state :approved
+    state :declined
+    
+    event :customer_confirms_order do
+      transitions :to => :pending, :from => [:incomplete]
+    end
+    
+    event :admin_approves_order do
+      transitions :to => :approved, :from => [:pending, :declined]
+    end
+    
+    event :admin_declines_order do
+      transitions :to => :declined, :from => [:pending, :approved]
+    end    
+  end
   
   # Find the total cost of an order by summing the cost of its line_items
   def total
