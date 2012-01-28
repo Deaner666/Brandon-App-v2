@@ -1,5 +1,9 @@
 ActiveAdmin.register AdminUser do
   
+  # CanCan
+  menu :if => proc{ can?(:manage, AdminUser) }, :priority => 10 # Why isn't this working?
+  controller.authorize_resource
+  
   index do
     column :email
     column :current_sign_in_at

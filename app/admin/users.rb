@@ -1,5 +1,9 @@
 ActiveAdmin.register User do
   
+  # CanCan
+  controller.authorize_resource
+  menu :priority => 6
+  
   index do
     column :email
     column :username

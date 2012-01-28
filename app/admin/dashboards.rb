@@ -31,12 +31,23 @@ ActiveAdmin::Dashboards.build do
   #   section "Recent User", :priority => 1
   #
   # Will render the "Recent Users" then the "Recent Posts" sections on the dashboard.
-
-  # section "Recent Orders" do
-  # ul do
-  #   Order.recent(10).collect do |order|
-  #     li link_to(order.user.branch_number, admin_order_path(order)))
-  #   end
-  # end
+  
+  section "Recent Orders" do
+    table_for Order.where(:status => "pending").limit(10) do
+      column :id
+      column "Branch", :user
+      column "Total" do |order|
+        format_price order.total
+      end
+      column :created_at
+      column "Actions" do |order|
+        ul do
+          li link_to "View", admin_order_path(order)
+          li link_to "Delete", admin_order_path(order), :method => :delete, :confirm => "Are you sure you want to delete that order?"
+        end
+      end
+    end
+    p strong link_to raw("View all orders &rarr;"), admin_orders_path
+  end
 
 end

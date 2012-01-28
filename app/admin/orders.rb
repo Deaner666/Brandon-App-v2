@@ -1,5 +1,10 @@
 ActiveAdmin.register Order do
 
+  # CanCan
+  controller.authorize_resource
+  
+  menu :priority => 3
+  
   scope :all
   scope :pending, :default => true
   scope :approved
@@ -41,8 +46,10 @@ ActiveAdmin.register Order do
     column :created_at
     column :status
     column "Actions" do |order|
-      li link_to "View", admin_order_path(order)
-      li link_to "Delete", admin_order_path(order), :method => :delete, :confirm => "Are you sure you want to delete that order?"
+      ul do
+        li link_to "View", admin_order_path(order)
+        li link_to "Delete", admin_order_path(order), :method => :delete, :confirm => "Are you sure you want to delete that order?"
+      end
     end
   end
   
@@ -59,13 +66,6 @@ ActiveAdmin.register Order do
           column "total" do |li| format_price li.total end
         end
       end
-      
-      
-      # row "Products" do |order|
-      #   for product in order.products do
-      #     li product
-      #   end
-      # end
     end
   end
 

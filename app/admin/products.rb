@@ -1,5 +1,9 @@
 ActiveAdmin.register Product do
   
+  # CanCan
+  menu :if => proc{ can? :manage, Product}, :priority => 8
+  controller.authorize_resource
+  
   form :html => { :multipart => true } do |f|
     f.inputs "Product Details" do
       f.input :name

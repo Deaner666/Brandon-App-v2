@@ -24,5 +24,15 @@ class Ability
     #   can :update, Article, :published => true
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    
+    user ||= AdminUser.new
+    
+    if user.superuser?
+      can :manage, :all
+    else
+      can [:read, :update, :approve, :decline], Order
+      can :manage, User
+    end
+    
   end
 end
