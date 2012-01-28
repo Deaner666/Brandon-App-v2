@@ -46,6 +46,7 @@ GEM
       xml-simple
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
+    cancan (1.6.7)
     cocaine (0.1.0)
     columnize (0.3.2)
     css3buttons (0.9.4)
@@ -189,6 +190,7 @@ DEPENDENCIES
   aasm (= 3.0.2)
   activeadmin
   aws-s3 (~> 0.6.2)
+  cancan (= 1.6.7)
   css3buttons
   factory_girl_rails
   fastercsv
