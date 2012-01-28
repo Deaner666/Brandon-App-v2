@@ -71,7 +71,7 @@ class OrdersController < ApplicationController
         if @order.update_attributes(params[:order])
           format.html do
             # OrderMailer.order_email(@order).deliver
-            @order.customer_confirms_order
+            @order.customer_confirms_order!
             session[:order] = nil
             redirect_to(products_path, :notice => 'Order submitted successfully.')
           end

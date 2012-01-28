@@ -2,16 +2,21 @@
 A Brandon Hire branch has placed an order for drinks
 ------------------------------------------------------
 
-Please take a look and check if this order is OK to be fulfilled by Drinkmaster.
-
-If it is approved, please forward this email to sales@drinkmaster.co.uk.
+This order has been approved by Brandon Hire head office and is ready to be processed.
 
 --------------
 Branch details
 --------------
 
-Branch No: <%= @order.branch %>
-Branch contact: <%= @order.contact %>
+Branch details
+Branch No: <%= @order.user.depot_number %>
+Branch Name: <%= @order.user.depot_name %>
+Branch Address:
+<%= @order.user.address1 %>
+<%= @order.user.address2 %>
+<%= @order.user.address3 %>
+<%= @order.user.address4 %>
+<%= @order.user.postcode %>
 
 -------------
 Order details

@@ -11,13 +11,18 @@
   <body>
     
     <h1>A Brandon Hire branch has placed an order for drinks</h1>
-    
-    <p><strong>Please take a look and check if this order is OK to be fulfilled by Drinkmaster.</strong></p>
-    <p style="color:f00;">If it is approved, please forward this email to <%= mail_to "sales@drinkmaster.co.uk", "sales@drinkmaster.co.uk" %>.</p>
+
+    <p style="color:f00;">This order has been approved by Brandon Hire head office and is ready to be processed.</p>
     
     <h2>Branch details</h2>
-    <p>Branch No: <%= @order.branch %></p>
-    <p>Branch contact: <%= @order.contact %></p>
+    <p>Branch No: <%= @order.user.depot_number %></p>
+    <p>Branch Name: <%= @order.user.depot_name %></p>
+    <p>Branch Address:</p>
+    <p><%= @order.user.address1 %></p>
+    <p><%= @order.user.address2 %></p>
+    <p><%= @order.user.address3 %></p>
+    <p><%= @order.user.address4 %></p>
+    <p><%= @order.user.postcode %></p>
 
     <h2>Order details</h2>
     <ul>

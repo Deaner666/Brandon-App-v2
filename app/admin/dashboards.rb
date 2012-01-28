@@ -32,4 +32,11 @@ ActiveAdmin::Dashboards.build do
   #
   # Will render the "Recent Users" then the "Recent Posts" sections on the dashboard.
 
+  # section "Recent Orders" do
+  # ul do
+  #   Order.recent(10).collect do |order|
+  #     li link_to(order.user.branch_number, admin_order_path(order)))
+  #   end
+  # end
+
 end

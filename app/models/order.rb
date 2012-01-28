@@ -43,9 +43,13 @@ class Order < ActiveRecord::Base
     end
     
     event :admin_declines_order do
-      transitions :to => :declined, :from => [:pending, :approved]
+      transitions :to => :declined, :from => [:pending]
     end    
   end
+  
+  scope :pending, where(:status => :pending)
+  scope :approved, where(:status => :approved)
+  scope :declined, where(:status => :declined)
   
   # Find the total cost of an order by summing the cost of its line_items
   def total
