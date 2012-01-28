@@ -77,7 +77,7 @@ class OrdersController < ApplicationController
           end
           format.xml  { head :ok }
         else
-          @order = Order.find(params[:id])
+          # @order = Order.find(params[:id])
           flash.now[:alert] = 'Oops... something went wrong!'
           format.html { render :action => "show" }
           format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
