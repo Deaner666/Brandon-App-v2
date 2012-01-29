@@ -43,7 +43,7 @@ ActiveAdmin::Dashboards.build do
       column "Actions" do |order|
         ul do
           li link_to "View", admin_order_path(order)
-          li link_to "Delete", admin_order_path(order), :method => :delete, :confirm => "Are you sure you want to delete that order?"
+          li link_to "Delete", admin_order_path(order), :method => :delete, :confirm => "Are you sure you want to delete that order?" if can? :delete, Order
         end
       end
     end
