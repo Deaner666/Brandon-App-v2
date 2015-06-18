@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.0.3'
 
@@ -14,11 +15,12 @@ gem 'formtastic', '~> 1.1.0'
 gem 'css3buttons'
 gem 'activeadmin'
 gem "aws-s3", "~> 0.6.2"
-gem "rmagick", "~> 2.13.1"
+gem "rmagick", "~> 2.15.2"
 gem "paperclip", "~> 2.3"
 gem "sass", "3.1.12"
 gem "aasm", "3.0.2"
 gem "cancan", "1.6.7"
+gem "puma"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -30,7 +32,7 @@ end
 group :development do
   gem 'rspec-rails', '2.3.0'
   # gem 'annotate-models'
-  gem 'ruby-debug19'
+  # gem 'ruby-debug19'
   gem 'mailcatcher'
 end
 

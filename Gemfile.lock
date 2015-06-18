@@ -38,7 +38,6 @@ GEM
       activemodel (= 3.0.3)
       activesupport (= 3.0.3)
     activesupport (3.0.3)
-    archive-tar-minitar (0.5.2)
     arel (2.0.7)
     aws-s3 (0.6.2)
       builder
@@ -48,7 +47,6 @@ GEM
     builder (2.1.2)
     cancan (1.6.7)
     cocaine (0.1.0)
-    columnize (0.3.2)
     css3buttons (0.9.4)
       actionpack (>= 3.0.0)
     daemons (1.1.3)
@@ -80,8 +78,6 @@ GEM
       inherited_resources (>= 1.0.6)
       will_paginate (>= 2.3.12)
     json (1.5.1)
-    linecache19 (0.5.11)
-      ruby_core_source (>= 0.1.4)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -111,6 +107,8 @@ GEM
       cocaine (>= 0.0.2)
       mime-types
     polyglot (0.3.1)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
@@ -131,7 +129,7 @@ GEM
       thor (~> 0.14.4)
     rake (0.8.7)
     responders (0.6.4)
-    rmagick (2.13.1)
+    rmagick (2.15.2)
     rspec (2.3.0)
       rspec-core (~> 2.3.0)
       rspec-expectations (~> 2.3.0)
@@ -145,16 +143,6 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.3.0)
-    ruby-debug-base19 (0.11.24)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby_core_source (>= 0.1.4)
-    ruby-debug19 (0.11.6)
-      columnize (>= 0.3.1)
-      linecache19 (>= 0.5.11)
-      ruby-debug-base19 (>= 0.11.19)
-    ruby_core_source (0.1.4)
-      archive-tar-minitar (>= 0.5.2)
     sass (3.1.12)
     sinatra (1.2.6)
       rack (~> 1.1)
@@ -197,11 +185,14 @@ DEPENDENCIES
   formtastic (~> 1.1.0)
   mailcatcher
   paperclip (~> 2.3)
+  puma
   rails (= 3.0.3)
-  rmagick (~> 2.13.1)
+  rmagick (~> 2.15.2)
   rspec (= 2.3.0)
   rspec-rails (= 2.3.0)
-  ruby-debug19
   sass (= 3.1.12)
   sqlite3-ruby
   webrat
+
+BUNDLED WITH
+   1.10.4
