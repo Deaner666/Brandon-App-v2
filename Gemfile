@@ -27,6 +27,7 @@ gem "puma"
 # and rake tasks are available in development mode:
 group :production do
   gem 'fastercsv'
+  gem 'pg'
 end
 
 group :development do
