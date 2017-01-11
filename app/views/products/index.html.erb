@@ -1,5 +1,7 @@
 <h1><%= @title %></h1>
 
+<p><strong>NOTE: There is a minimum order of 20 trays of drinks</strong></p>
+
 <% for product in @products do %>
 
   <%= form_tag line_items_path, :method => :post do %>
