@@ -29,21 +29,21 @@
   </head>
 
   <body id="<%= body_id %>">
-    
+
     <!-- Top bar showing login information -->
     <aside id="login-bar" class="container">
       <div class="row">
         <div class="twelvecol">
           <% if user_signed_in? %>
             <p>
-              Signed in as <%= current_user.username %> | 
-              <%= current_user.depot_number ? current_user.depot_number : "" %> | 
-              <%= current_user.depot_name ? current_user.depot_name : "" %> | 
+              Signed in as <%= current_user.username %> |
+              <%= current_user.depot_number ? current_user.depot_number : "" %> |
+              <%= current_user.depot_name ? current_user.depot_name : "" %> |
               <%= current_user.address1 ? current_user.address1 + ", " : "" %>
               <%= current_user.address2 ? current_user.address2 + ", " : "" %>
               <%= current_user.address3 ? current_user.address3 + ", " : "" %>
               <%= current_user.address4 ? current_user.address4 + ", " : "" %>
-              <%= current_user.postcode ? current_user.postcode : "" %> | 
+              <%= current_user.postcode ? current_user.postcode : "" %> |
               <%= link_to "Logout", destroy_user_session_path %>
             </p>
           <% else %>
@@ -52,7 +52,7 @@
         </div>
       </div>
     </aside>
-    
+
     <!-- Masthead title bar -->
     <header id="masthead" class="container">
       <div class="row">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </header>
-    
+
     <!-- Main site navigation -->
     <nav id="main-nav" class="container">
       <div class="row">
@@ -73,7 +73,7 @@
         </ul>
       </div>
     </nav>
-    
+
     <!-- Rails flash -->
     <section id="page" class="container">
       <div class="row">
@@ -84,16 +84,16 @@
           <% if alert %>
             <div id="alert"><%= raw alert %></div>
           <% end %>
-          
+
           <%= yield %>
         </div>
-        
+
         <aside id="sidebar" class="fourcol last">
-          
+
           <% unless user_signed_in? %>
               <p class="highlight">If you're not sure of your login details, please contact Drinkmaster on <strong>01579 342082</strong></p>
           <% end %>
-          
+
           <% if @order %>
             <section id="order-summary">
               <h1>Your order</h1>
@@ -120,9 +120,9 @@
               </div>
             </section>
           <% end %>
-          
+
           <section>
-            <p><strong>NOTE: There is a minimum order of 20 trays of drinks</strong></p>
+            <p><strong>NOTE: Orders of less than 20 trays of drinks incur an additional £6.95 shipping charge.</strong></p>
           </section>
 
           <section id="instructions">
@@ -133,7 +133,7 @@
         </aside>
       </div>
     </section>
-    
+
     <footer id="page-footer" class="container">
       <div class="row">
         <section id="copyright-info" class="fourcol">
